@@ -1,23 +1,17 @@
 <html>
-	<script>
-		const mixbonacci = (pattern, length) => {
-			const gen = (fn, a) => () => (a.push(fn(a)), a.shift());
-
-			const fns = {
-				fib: gen(([a, b]) => a + b, [0, 1]),
-				pad: gen(([a, b]) => a + b, [1, 0, 0]),
-				jac: gen(([a, b]) => 2 * a + b, [0, 1]),
-				pel: gen(([a, b])=> a + 2 * b, [0, 1]),
-				tri: gen(([a, b, c]) => a + b + c, [0, 0, 1]),
-				tet: gen(([a, b, c, d]) => a + b + c + d, [0, 0, 0, 1]),
-			}
-
-			return pattern.length
-				? Array.from(
-					{length},
-					(_,i) => fns[pattern[i % pattern.length]]())
-				: []
-		}
-	</script>
-	<iframe width="1280" height="720" src="https://www.youtube.com/embed/W2TE0DjdNqI" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+	<head>
+		<link href="Main.css" rel="stylesheet"/>
+		<script src="jquery-1.10.2.min.js"></script>
+		<script src="JavaScript%20Main.js"></script>
+	</head>
+	<body>
+		<div id="main">
+			<div id="mountainImg"><img src="Mountain.png" width="100%"/></div>
+			<div id="logo"><img src="konata.png"/></div>
+			<iframe width="100%" height="100%" src="https://www.youtube.com/embed/W2TE0DjdNqI?modestbranding=1&autohide=1&showinfo=0&controls=0" frameborder="0" allow="autoplay; encrypted-media" id="video"></iframe>
+		</div>
+		<div id="btn">
+			<img src="Playpng.png" width="20px"/>
+		</div>
+	</body>
 </html>
