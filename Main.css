@@ -14,7 +14,7 @@ body{
     transform: translate(-50%,-50%);
     overflow: hidden;
 }
-#logo{
+#konata{
     height: 100px;
     width: 100%;
     position: absolute;
@@ -49,9 +49,3 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
-
-
-
-
-
