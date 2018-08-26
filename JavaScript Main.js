@@ -1,15 +1,13 @@
 $(window).scroll(function(){
     var scrollval = $(this).scrollTop();    // It will return scroll value
-
-    $("#konata").css("transform",'translate(0px,-'+scrollval/2+'%)');
+    if(scrollval<=500){
+      $("#konata").css("transform",'translate(0px,-'+scrollval/2+'%)');
+    }
     $("#play_btn").css("transform",'translate(-50%,'+scrollval/3+'%)');
 });
 
-var p = document.getElementById ("video");
+var p = document.getElementById ("player");
 $(p).hide();
-
-var t = document.getElementById ("thumbnail");
-t.src = "http://img.youtube.com/vi/W2TE0DjdNqI/0.jpg";
 
 
 var tag = document.createElement('script');
@@ -20,10 +18,10 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 var player;
 
 onYouTubeIframeAPIReady = function () {
-    player = new YT.Player('video', {
+    player = new YT.Player('player', {
         height: '100%',
         width: '100%',
-        videoId: 'W2TE0DjdNqI',  // youtube video id
+        playerId: 'W2TE0DjdNqI',  // youtube player id
         playerVars: {
             'autoplay': 0,
             'rel': 0,
@@ -40,13 +38,12 @@ onYouTubeIframeAPIReady = function () {
 
 onPlayerStateChange = function (event) {
     if (event.data == YT.PlayerState.ENDED) {
-        $('#play_btn').fadeIn('normal');
+        $('.play_button').fadeIn('normal');
     }
 }
 
-$(document).on('click', '#play_btn', function () {
+$(document).on('click', '.play_button', function () {
     $(this).hide();
-    $("#video").show();
-    $("#thumbnail_container").hide();
-    player.playVideo();
+    $("#player").show();
+    player.playplayer();
 });
