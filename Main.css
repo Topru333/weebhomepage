@@ -15,7 +15,7 @@ body{
     overflow: hidden;
 }
 #konata{
-    height: 100px;
+    height: 80px;
     width: 100%;
     position: absolute;
     top: 40%;
@@ -30,7 +30,7 @@ body{
     transform: translateX(-50%);
     top:250px;
 }
-#btn{
+#play_btn{
     height: 60px;
     width: 60px;
     border-radius: 50%;
@@ -43,9 +43,27 @@ body{
     box-shadow: 0 0 0 8px rgba(140,237,243,.2),0 0 0 16px rgba(140,237,243,.3);
     cursor: pointer;
 }
-#btn img{
+#play_btn:hover
+{
+    opacity: 1;
+    -webkit-filter: brightness (1);
+}
+#play_btn img{
     position: absolute;
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+#thumbnail_container
+{
+    width: 434px;
+    height: 244px;
+    overflow: hidden;
+    background-color: #000;
+}
+
+img.thumbnail
+{
+    margin-top: -50px;
+    opacity: 0.5;
 }
