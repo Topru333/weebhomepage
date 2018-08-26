@@ -21,7 +21,7 @@ onYouTubeIframeAPIReady = function () {
     player = new YT.Player('player', {
         height: '100%',
         width: '100%',
-        playerId: 'W2TE0DjdNqI',  // youtube player id
+        videoId: 'W2TE0DjdNqI',  // youtube video id
         playerVars: {
             'autoplay': 0,
             'rel': 0,
@@ -45,5 +45,5 @@ onPlayerStateChange = function (event) {
 $(document).on('click', '.play_button', function () {
     $(this).hide();
     $("#player").show();
-    player.playplayer();
+    player.playVideo();
 });
