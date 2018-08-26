@@ -26,10 +26,9 @@ function onYouTubePlayerAPIReady() {
 function onPlayerReady(event) {
 
   // bind events
-
-  var pauseButton = document.getElementById("btn");
-  pauseButton.addEventListener("click", function() {
-    player.pauseVideo();
+  var playButton = document.getElementById("btn");
+  playButton.addEventListener("click", function() {
+    player.playVideo();
   });
 
 }
