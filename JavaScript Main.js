@@ -1,14 +1,12 @@
 $(window).scroll(function(){
     var scrollval = $(this).scrollTop();    // It will return scroll value
-    if(scrollval<=500){
-      $("#konata").css("transform",'translate(0px,-'+scrollval/2+'%)');
-    }
-    $("#play_btn").css("transform",'translate(-50%,'+scrollval/3+'%)');
+    $("#waifu").css("transform",'translate(-50%,-' + scrollval/2.3 + '%)');
+    $("#play_btn").css("transform",'translate(-50%,'+scrollval*2.5+'%)');
+
 });
 
 var p = document.getElementById ("player");
 $(p).hide();
-
 
 var tag = document.createElement('script');
 tag.src = "//www.youtube.com/iframe_api";
