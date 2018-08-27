@@ -144,9 +144,10 @@ body {
 }
 
 #player_title{
-    height: 50px;
+    height: 20px;
     width: 50%;
-    top: 137%;
+    max-height: 20px;
+    top: 136%;
     left: 70%;
     position: absolute;
     transform: translateX(-50%);

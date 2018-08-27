@@ -34,7 +34,11 @@ onPlayerStateChange = function (event) {
     if (event.data == YT.PlayerState.ENDED) {
         player.playVideoAt(newRandomNumber(player.getPlaylist().length));
     }
-    document.getElementById( "player_title" ).innerText = player.getVideoData().title;
+    let title = player.getVideoData().title;
+    if(title.length>40){
+        title = title.substr(0,21);
+    }
+    document.getElementById( "player_title" ).innerText = title;
 }
 
 var playing = false;
@@ -76,7 +80,7 @@ $(document).on('click', '.play_button', function () {
 
 $(document).on('click', '.next_button', function () {
     if (playing) {
-        player.nextVideo();
+        player.playVideoAt(newRandomNumber(player.getPlaylist().length));
     }
 });
 
