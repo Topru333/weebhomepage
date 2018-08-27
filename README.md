@@ -1,1 +1,1 @@
-weebhomepage.github.io
+weebhomepage
