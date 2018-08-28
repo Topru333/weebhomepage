@@ -5,8 +5,8 @@ html {
 }
 
 body {
-    height: 0;
-    width: 0;
+    height: auto;
+    width: auto;
     background-color: #091114;
     background-size: cover;
     display: flex;
