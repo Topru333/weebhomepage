@@ -7,8 +7,8 @@ $(window).scroll(function () {
     $("#player").css("opacity",1-scrollval/420);
     $("#linear-gradient").css("opacity",scrollval/420);
     $("#waifu").css("transform", 'translateY(-' + scrollval / 2.75 + '%)');
-    $("#play_btn").css("transform", 'translate(' + (toScreenSizeX(scrollval * 3.45) - 50) + '%,' + ((scrollval * 3.2) - 50) + '%)');
-    $("#next_btn").css("transform", 'translate(' + (toScreenSizeX(scrollval * 3.45) - 50) + '%,' + ((scrollval * 2.8) - 50) + '%)');
+    $("#play_btn").css("transform", 'translate(' + (toScreenSizeX(scrollval * 3.35) - 50) + '%,' + ((scrollval * 3.2) - 50) + '%)');
+    $("#next_btn").css("transform", 'translate(' + (toScreenSizeX(scrollval * 3.35) - 50) + '%,' + ((scrollval * 2.8) - 50) + '%)');
 });
 
 let toScreenSizeX = function (a) {
