@@ -37,10 +37,18 @@ class Player {
                 $("#player_title").hide();
                 break;
             case YT.PlayerState.PLAYING:
+                this.playing = true;
                 $("#player_title").show();
+                $('#play_img').hide();
+                $('#next_btn').show();
+                $('#pause_img').show();
                 break;
             case  YT.PlayerState.PAUSED:
+                this.playing = false;
                 $("#player_title").hide();
+                $('#play_img').show();
+                $('#next_btn').hide();
+                $('#pause_img').hide();
                 break;
             default:
                 break;
@@ -70,9 +78,6 @@ class Player {
         if (this.playing) {
             this.playing = false;
             this.iframe_player.pauseVideo();
-            $('#play_img').show();
-            $('#next_btn').hide();
-            $('#pause_img').hide();
         } else {
             this.playing = true;
             if (this.ranNumber == -1) {
@@ -80,9 +85,6 @@ class Player {
             } else {
                 this.iframe_player.playVideo();
             }
-            $('#play_img').hide();
-            $('#next_btn').show();
-            $('#pause_img').show();
         }
     }
 
