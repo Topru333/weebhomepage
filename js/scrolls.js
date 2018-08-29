@@ -1,9 +1,10 @@
 $(window).scroll(function () {
     let scrollval = $(this).scrollTop();    // It will return scroll value
-    $("#menu").css("opacity",scrollval/410);
-    $("#player_title").css("opacity",scrollval/410);
-    $("#player").css("opacity",1-scrollval/420);
-    $("#linear-gradient").css("opacity",scrollval/420);
+    var percent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+    $("#menu").css("opacity",  percent);
+    $("#player_title").css("opacity",  percent);
+    $("#player").css("opacity", 1 -  percent);
+    $("#linear-gradient").css("opacity",percent);
     $("#waifu").css("transform", 'translateY(-' + scrollval / 2.34 + '%)');
     //$("#next_btn").css("transform", 'translate(' + (toScreenSizeX(scrollval * 3.35) - 50) + '%,' + ((scrollval * 2.8) - 50) + '%)');
 });
