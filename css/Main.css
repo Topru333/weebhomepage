@@ -47,8 +47,8 @@ body {
 }
 
 #waifu {
-    height: 240px;
-    width: 240px;
+    height: 200px;
+    width: 200px;
     margin-top: 510px;
     position: absolute;
     overflow: hidden;
@@ -78,52 +78,6 @@ body {
     height: 120%;
 }
 
-#play_btn {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    background: #ffeff4;
-    position: absolute;
-    z-index: 999;
-    box-shadow: 0 0 0 8px rgba(255, 216, 228, .2), 0 0 0 16px rgba(204, 107, 142, .3);
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-
-}
-
-#play_btn img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#next_btn {
-    height: 60px;
-    width: 60px;
-    border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    opacity: 0;
-    background: #ffeff4;
-    position: absolute;
-    z-index: 998;
-    box-shadow: 0 0 0 8px rgba(255, 216, 228, .2), 0 0 0 16px rgba(204, 107, 142, .3);
-    cursor: pointer;
-    transform: translate(-50%, -50%);
-
-}
-
-#next_btn img {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 #menu {
     display: flex;
     justify-content: center;
@@ -143,12 +97,17 @@ body {
     background-clip: padding-box;
 }
 
-#player_menu {
-    width: 100%;
+#player {
     height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 50%;
+    z-index: 850;
+    transform: translateX(-50%);
+    opacity: 1;
 }
 
-#player {
+#video_holder {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -184,7 +143,7 @@ a:link, a:visited {
     cursor: pointer;
 }
 
-.button_menu_element {
+#btn_menu_element1, #btn_menu_element2, #btn_menu_element3 {
     display: flex;
     justify-content: center;
     align-items: center;
